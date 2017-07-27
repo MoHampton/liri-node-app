@@ -1,0 +1,188 @@
+texttext
+============== Tweet 0 ==============
+[object Object]
+Created At: [object Object]
+
+============== Tweet 1 ==============
+[object Object]
+Created At: [object Object]
+
+============== Tweet 2 ==============
+[object Object]
+Created At: [object Object]
+
+============== Tweet 3 ==============
+[object Object]
+Created At: [object Object]
+
+============== Tweet 4 ==============
+[object Object]
+Created At: [object Object]
+
+============== Tweet 5 ==============
+undefined
+Created At: undefined
+
+============== Tweet 6 ==============
+undefined
+Created At: undefined
+
+============== Tweet 7 ==============
+undefined
+Created At: undefined
+
+============== Tweet 8 ==============
+undefined
+Created At: undefined
+
+============== Tweet 9 ==============
+undefined
+Created At: undefined
+
+============== Tweet 10 ==============
+undefined
+Created At: undefined
+
+============== Tweet 11 ==============
+undefined
+Created At: undefined
+
+============== Tweet 12 ==============
+undefined
+Created At: undefined
+
+============== Tweet 13 ==============
+undefined
+Created At: undefined
+
+============== Tweet 14 ==============
+undefined
+Created At: undefined
+
+============== Tweet 15 ==============
+undefined
+Created At: undefined
+
+============== Tweet 16 ==============
+undefined
+Created At: undefined
+
+============== Tweet 17 ==============
+undefined
+Created At: undefined
+
+============== Tweet 18 ==============
+undefined
+Created At: undefined
+
+============== Tweet 19 ==============
+undefined
+Created At: undefined
+
+============== Tweet 0 ============
+Liri is my awesome new app! #CodeNewbie #WomenWhoCode
+Created At: Thu Jul 27 02:59:00 +0000 2017
+
+============== Tweet 1 ============
+RT @MoxieHampton: Day 6: Finally folded and asked for #firebase help. Turns out the JS wasn't linked to the HTML page. #CodeNewbie #100Days…
+Created At: Thu Jul 27 02:16:41 +0000 2017
+
+============== Tweet 2 ============
+RT @MoxieHampton: D12: Can I make a Siri-like app with #Nodejs? Sure...pour me another cup ☕️ #100DaysOfCode #javascript #WomenWhoCode http…
+Created At: Thu Jul 27 02:16:23 +0000 2017
+
+============== Tweet 3 ============
+RT @MoxieHampton: D16: Made a second twitter account to play with API keys. Feeling very covert affairs. #100DaysOfCode #javascript https:/…
+Created At: Thu Jul 27 02:16:17 +0000 2017
+
+============== Tweet 4 ============
+RT @MoxieHampton: “I’m so tired and I’m not even a woman.” — @WilliamCStubbs Thank you for this → https://t.co/5mHG08CER0 https://t.co/3El6…
+Created At: Thu Jul 27 02:16:11 +0000 2017
+
+============== Tweet 0 ============
+RT @ThePracticalDev: When your entire knowledge gets judged because you didn't know that one random fact 
+{ author: @yaphi1 }
+https://t.co/…
+Created At: Thu Jul 27 04:05:51 +0000 2017
+
+============== Tweet 1 ============
+RT @chipsineni: This is ARKit's A-ha moment   
+
+ (now shorter and embedded)
+ @TRIXIstudios #unity3d  #AugmentedReality  #ar #ARKit https://…
+Created At: Thu Jul 27 04:04:04 +0000 2017
+
+============== Tweet 2 ============
+RT @themetamug: An array is map of strangers, whom you refer by indexes. Oh that third guy or forth guy. #javascript #code #data
+Created At: Thu Jul 27 04:03:28 +0000 2017
+
+============== Tweet 3 ============
+RT @Moayadkh9: Another day = another coffee to decode. #developer #code https://t.co/7vD3TVK0WI
+Created At: Thu Jul 27 04:03:13 +0000 2017
+
+============== Tweet 4 ============
+RT @dobhavesh: RT @elegantthemes The Atom #Code Editor: A Comprehensive #Review for #WordPress Users https://t.co/uGiqqOKeud #Webdev #WPDev…
+Created At: Thu Jul 27 04:02:52 +0000 2017
+
+============== Tweet 5 ============
+RT @patnaoum: That code grind
+#gamedev #indiedev #game #gaming #code #CSharp #unity https://t.co/7g4XgKCDMe
+Created At: Thu Jul 27 04:02:03 +0000 2017
+
+============== Tweet 6 ============
+RT @luci_hm: The coding life with un poquito de cafe. ☕️ 👌🏼#code #webdesign https://t.co/eodyJ650A6
+Created At: Thu Jul 27 04:01:30 +0000 2017
+
+============== Tweet 7 ============
+RT @Doccubus_Nat: This is so cute and funny #baby #code https://t.co/HutT4OdTQK
+Created At: Thu Jul 27 04:00:37 +0000 2017
+
+============== Tweet 8 ============
+RT @CarlyleCam: 10 Tips to Improve Programming Skill and become better Programmer, Developer https://t.co/0ingj1R7lQ #code https://t.co/yxZ…
+Created At: Thu Jul 27 03:59:25 +0000 2017
+
+============== Tweet 9 ============
+RT @bob_robinson123: 10 Ways to Test your #Programming Skills in #HTML and #CSS -https://t.co/oHPQ1elPI2 
+@Languages__Web @CodeWisdom @gp_p…
+Created At: Thu Jul 27 03:58:26 +0000 2017
+
+============== Tweet 10 ============
+RT @CodeWisdom: "If someone claims to have the perfect programming language, he is either a fool or a salesman or both." - Bjarne Stroustrup
+Created At: Thu Jul 27 03:57:45 +0000 2017
+
+============== Tweet 11 ============
+RT @CodeWisdom: "One of the best programming skills you can have is knowing when to walk away for awhile." - Oscar Godson
+Created At: Thu Jul 27 03:57:19 +0000 2017
+
+============== Tweet 12 ============
+RT @nodejs: #nodejs is more than an #application platform. Forrester provides a few examples of why in this report https://t.co/pW8qRQO2y6…
+Created At: Thu Jul 27 03:56:08 +0000 2017
+
+============== Tweet 13 ============
+RT @WomenWhoCode: "Inclusion means you create a company + culture that values what diversity actually brings to the table."#WWCode
+https://…
+Created At: Thu Jul 27 03:55:45 +0000 2017
+
+============== Tweet 14 ============
+RT @BarackObama: John McCain is an American hero &amp; one of the bravest fighters I've ever known. Cancer doesn't know what it's up against. G…
+Created At: Thu Jul 27 03:54:30 +0000 2017
+
+============== Tweet 15 ============
+Liri is my awesome new app! #CodeNewbie #WomenWhoCode
+Created At: Thu Jul 27 02:59:00 +0000 2017
+
+============== Tweet 16 ============
+RT @MoxieHampton: Day 6: Finally folded and asked for #firebase help. Turns out the JS wasn't linked to the HTML page. #CodeNewbie #100Days…
+Created At: Thu Jul 27 02:16:41 +0000 2017
+
+============== Tweet 17 ============
+RT @MoxieHampton: D12: Can I make a Siri-like app with #Nodejs? Sure...pour me another cup ☕️ #100DaysOfCode #javascript #WomenWhoCode http…
+Created At: Thu Jul 27 02:16:23 +0000 2017
+
+============== Tweet 18 ============
+RT @MoxieHampton: D16: Made a second twitter account to play with API keys. Feeling very covert affairs. #100DaysOfCode #javascript https:/…
+Created At: Thu Jul 27 02:16:17 +0000 2017
+
+============== Tweet 19 ============
+RT @MoxieHampton: “I’m so tired and I’m not even a woman.” — @WilliamCStubbs Thank you for this → https://t.co/5mHG08CER0 https://t.co/3El6…
+Created At: Thu Jul 27 02:16:11 +0000 2017
