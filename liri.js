@@ -8,13 +8,16 @@ var fs = require('fs');
 
 //JS switch
 switch(userCommand) {
-  case "my-tweets":
-    myTweets();
-    break;
-  case "spotify-this-song":
-    spotifyThis();
-    break;
-}
+    case "my-tweets":
+        myTweets();
+        break;
+    case "spotify-this-song":
+        spotifyThis();
+        break;
+    case "movie-this" :
+        movieThis();
+        break;
+}   
 
 //twitter variables
 var Twitter = require('twitter');
@@ -65,5 +68,33 @@ function myTweets(){
 }//end spotify function
 
 
+//movie variables
+	var request = require('request');
+    var imdbUrl = 'http://www.omdbapi.com/?apikey=40e9cece&t=' + userInput +'&y=&plot=short&r=json';
+
+//movie function
+function movieThis(userInput){
+    request(imdbUrl, function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        var movieObj = JSON.parse(body);
+        if (movieObj.Response == 'False') {
+            return console.log('Invalid movie title.');
+        }else{
+        console.log(movieObj.Title);
+        console.log(movieObj.Year);
+        console.log(movieObj.imdbRating);
+        console.log(movieObj.Country);
+        console.log(movieObj.Language);
+        console.log(movieObj.Plot);
+        console.log(movieObj.Actors);
+        console.log(movieObj.tomatoRating);
+        console.log(movieObj.tomatoURL);
+        console.log('---------------------------------------------------------------');
+       }
+        }
+    });
+}//end movie function 
+
+movieThis();
 spotifyThis();
 myTweets();
