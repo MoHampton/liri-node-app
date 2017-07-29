@@ -34,13 +34,12 @@ function myTweets() {
         });
     }; // end twitter function
 
-//spotify variables
- var spotify = require('node-spotify-api')
- var spotifyApi = new spotify(keys.spotifyKeys);
-
-
 //spotify function
-	function spotifyThis() {
+function spotifyThis() {
+    var spotify = require('node-spotify-api');
+    var keys = require('./keys.js');
+    var spotifyApi = new spotify(keys.spotifyKeys);
+
     if (userInput != undefined) {
 		spotifyApi.search({type: 'track', query: userInput + '&limit=5'}, function (err,data) {
         if (err) {
@@ -59,9 +58,10 @@ function myTweets() {
         });
 
   	} else {
-        userInput = 'The Sign';
+        userInput = 'The Sign Ace of Base';
+        spotifyThis();
   	}
-}//end spotify function
+};//end spotify function
 
 
 //movie variables
@@ -90,7 +90,3 @@ function movieThis(userInput){
         }
     });
 }//end movie function 
-
-movieThis();
-spotifyThis();
-myTweets();
