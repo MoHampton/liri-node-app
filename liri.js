@@ -14,6 +14,8 @@ switch(userCommand) {
     case "movie-this" :
         movieThis();
         break;
+    case 'do-what-it-says': doWhatItSays();
+		break;
 }   
 
 //twitter function (changed to include variables within the function)
@@ -64,18 +66,17 @@ function spotifyThis() {
 };//end spotify function
 
 
-//movie variables
-	var request = require('request');
+//movie function 
+function movieThis(userInput){
+    var request = require('request');
     var imdbUrl = 'http://www.omdbapi.com/?apikey=40e9cece&t=' + userInput +'&y=&plot=short&r=json';
 
-//movie function
-function movieThis(userInput){
     request(imdbUrl, function (error, response, body) {
       if (!error && response.statusCode == 200) {
         var movieObj = JSON.parse(body);
         if (movieObj.Response == 'False') {
             return console.log('Invalid movie title.');
-        }else{
+        } else {
         console.log(movieObj.Title);
         console.log(movieObj.Year);
         console.log(movieObj.imdbRating);
@@ -87,6 +88,40 @@ function movieThis(userInput){
         console.log(movieObj.tomatoURL);
         console.log('---------------------------------------------------------------');
        }
-        }
-    });
-}//end movie function 
+ 		} else {
+			userInput = 'Mr Nobody';
+			movieThis();
+		}
+	});
+};//end movie function 
+
+//Do What It Says Function
+function doWhatItSays() {
+	var fs = require('fs');
+
+	var writeThis = [process.argv[3], process.argv[4]];
+
+	fs.writeFile('random.txt', writeThis, function(error){
+		if (error) {
+			console.log('error');
+		} else {
+			console.log('created the file');
+		}
+	});
+
+	fs.readFile('random.txt', {encoding: 'utf8'}, function(err, data) {
+		if (err) {
+			return console.log(err);
+		} else {
+
+			var array = data.split(',');
+
+			userCommand = array[0];
+			userInput = array [1];
+
+
+		}
+	})
+};//end DWIS function
+
+
