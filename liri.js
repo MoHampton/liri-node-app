@@ -3,9 +3,6 @@ var userCommand = process.argv[2];
 var userInput = process.argv[3];
 var fs = require('fs');
 
-
-
-
 //JS switch
 switch(userCommand) {
     case "my-tweets":
@@ -19,15 +16,14 @@ switch(userCommand) {
         break;
 }   
 
-//twitter variables
-var Twitter = require('twitter');
-var keys = require('./keys.js');
-var client = new Twitter(keys.twitterKeys);
-var params = {screen_name: 'atomic_covert', count: 20};
-
-//twitter function
-function myTweets(){
-        client.get('statuses/user_timeline', params, function(error, tweets, response) {
+//twitter function (changed to include variables within the function)
+function myTweets() {
+    var Twitter = require('twitter');
+    var keys = require('./keys.js');
+    var client = new Twitter(keys.twitterKeys);
+    var params = {screen_name: 'atomic_covert', count: 20};
+    
+    client.get('statuses/user_timeline', params, function(error, tweets, response) {
             if (!error && response.statusCode == 200) {
                 // console.log(tweets);
                 for(var i = 0; i < tweets.length; i++) {
