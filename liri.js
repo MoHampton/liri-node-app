@@ -14,7 +14,7 @@ function myTweets() {
             if (!error && response.statusCode == 200) {
                 // console.log(tweets);
                 for(var i = 0; i < tweets.length; i++) {
-                        console.log("\n============== Tweet " + [i] + " =============\n");
+                        console.log("\n============= Tweet " + [i] + " ============");
                         console.log(tweets[i].text);
                         
                 }//end of twitter for loop
@@ -54,16 +54,17 @@ function spotifyThis() {
 
 
 //movie function 
-function movieThis(userInput){
+function movieThis(){
     var request = require('request');
     var imdbUrl = 'http://www.omdbapi.com/?apikey=40e9cece&t=' + userInput +'&y=&plot=short&r=json';
 
     request(imdbUrl, function (error, response, body) {
       if (!error && response.statusCode == 200) {
         var movieObj = JSON.parse(body);
-        if (movieObj.Response == 'False') {
+        if (movieObj.Response == null) {
             return console.log('Invalid movie title.');
         } else {
+        console.log('\n=============== MOVIE INFO ===============\n');
         console.log(movieObj.Title);
         console.log(movieObj.Year);
         console.log(movieObj.imdbRating);
@@ -73,10 +74,10 @@ function movieThis(userInput){
         console.log(movieObj.Actors);
         console.log(movieObj.tomatoRating);
         console.log(movieObj.tomatoURL);
-        console.log('---------------------------------------------------------------');
+        console.log('\n=============== MOVIE INFO ===============\n');
        }
  		} else {
-			userInput = 'Mr Nobody';
+			userInput = 'Nobody';
 			movieThis();
 		}
 	});
@@ -105,6 +106,8 @@ function doWhatItSays() {
 
 			userCommand = array[0];
 			userInput = array [1];
+            
+            switchCase();
 
 
 		}
