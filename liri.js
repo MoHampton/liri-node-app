@@ -1,22 +1,7 @@
 //global variables
 var userCommand = process.argv[2];
 var userInput = process.argv[3];
-var fs = require('fs');
 
-//JS switch
-switch(userCommand) {
-    case "my-tweets":
-        myTweets();
-        break;
-    case "spotify-this-song":
-        spotifyThis();
-        break;
-    case "movie-this" :
-        movieThis();
-        break;
-    case 'do-what-it-says': doWhatItSays();
-		break;
-}   
 
 //twitter function (changed to include variables within the function)
 function myTweets() {
@@ -31,6 +16,7 @@ function myTweets() {
                 for(var i = 0; i < tweets.length; i++) {
                         console.log("\n============== Tweet " + [i] + " =============\n");
                         console.log(tweets[i].text);
+                        
                 }//end of twitter for loop
             }//end of conditional statement
         });
@@ -51,11 +37,12 @@ function spotifyThis() {
             return console.log('Track not found, please try again');
           }
           // console.log(data);
+          console.log('\n=============== SONG INFO ===============\n');
           console.log('Artist:', data.tracks.items[0].artists[0].name);
           console.log('Track:', data.tracks.items[0].name);
           console.log('Preview Link:', data.tracks.items[0].preview_url);
           console.log('Album:', data.tracks.items[0].album.name);
-          console.log('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
+          console.log('\n=============== SONG INFO ===============\n');
         }
         });
 
@@ -95,7 +82,7 @@ function movieThis(userInput){
 	});
 };//end movie function 
 
-//Do What It Says Function
+//Do What It Says Function (DWIS)
 function doWhatItSays() {
 	var fs = require('fs');
 
@@ -124,4 +111,22 @@ function doWhatItSays() {
 	})
 };//end DWIS function
 
+//JS switch (changed to function & moved to end of JS)
+function switchCase(){
+switch(userCommand) {
+    case "my-tweets":
+        myTweets();
+        break;
+    case "spotify-this-song":
+        spotifyThis();
+        break;
+    case "movie-this" :
+        movieThis();
+        break;
+    case 'do-what-it-says': doWhatItSays();
+		break;
+    }   
+}
+
+switchCase(); 
 
