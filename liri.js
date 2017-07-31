@@ -1,13 +1,14 @@
-//global variables
+//parameters & nodejs file system variables
 var userCommand = process.argv[2];
 var userInput = process.argv[3];
-
+var fs = require('fs');
 
 //twitter function (changed to include variables within the function)
 function myTweets() {
     var Twitter = require('twitter');
     var keys = require('./keys.js');
     var client = new Twitter(keys.twitterKeys);
+    fs.appendFileSync('log.txt','text','utf8');
     var params = {screen_name: 'atomic_covert', count: 20};
     
     client.get('statuses/user_timeline', params, function(error, tweets, response) {
@@ -16,6 +17,7 @@ function myTweets() {
                 for(var i = 0; i < tweets.length; i++) {
                         console.log("\n============= Tweet " + [i] + " ============");
                         console.log(tweets[i].text);
+                        
                         
                 }//end of twitter for loop
             }//end of conditional statement
@@ -56,14 +58,11 @@ function spotifyThis() {
 //movie function 
 function movieThis(){
     var request = require('request');
-    var imdbUrl = 'http://www.omdbapi.com/?apikey=40e9cece&t=' + userInput +'&y=&plot=short&r=json';
+    var imdbUrl = 'http://www.omdbapi.com/?apikey=40e9cece&t=' + userInput +'&tomatoes=true&y=&plot=short&r=json';
 
     request(imdbUrl, function (error, response, body) {
       if (!error && response.statusCode == 200) {
         var movieObj = JSON.parse(body);
-        if (movieObj.Response == null) {
-            return console.log('Invalid movie title.');
-        } else {
         console.log('\n=============== MOVIE INFO ===============\n');
         console.log(movieObj.Title);
         console.log(movieObj.Year);
@@ -75,44 +74,42 @@ function movieThis(){
         console.log(movieObj.tomatoRating);
         console.log(movieObj.tomatoURL);
         console.log('\n=============== MOVIE INFO ===============\n');
-       }
- 		} else {
-			userInput = 'Nobody';
+
+        } else {
+			userInput = 'Mr. Nobody';
 			movieThis();
-		}
+        }
 	});
 };//end movie function 
 
 //Do What It Says Function (DWIS)
 function doWhatItSays() {
-	var fs = require('fs');
+  fs.readFile('random.txt','utf8', function(err,data){
+      if(err) throw err;
 
-	var writeThis = [process.argv[3], process.argv[4]];
+      var dataSplit = data.split(',');
+          userCommand = dataSplit[0];
+          userInput = dataSplit[1];
+          console.log(userCommand + " " + userInput);
 
-	fs.writeFile('random.txt', writeThis, function(error){
-		if (error) {
-			console.log('error');
-		} else {
-			console.log('created the file');
-		}
-	});
+      switch(userCommand){
 
-	fs.readFile('random.txt', {encoding: 'utf8'}, function(err, data) {
-		if (err) {
-			return console.log(err);
-		} else {
+          case "my-tweets":
+            twitterThis();
+            break;
 
-			var array = data.split(',');
+          case "spotify-this-song":
+            spotifyThis();
+            break;
+        
+          case "movie-this":
+            movieThis();
+            break;
+      }
 
-			userCommand = array[0];
-			userInput = array [1];
-            
-            switchCase();
+  });
 
-
-		}
-	})
-};//end DWIS function
+};
 
 //JS switch (changed to function & moved to end of JS)
 function switchCase(){
