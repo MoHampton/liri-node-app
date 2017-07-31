@@ -59,7 +59,7 @@ function spotifyThis() {
 function movieThis(){
     var request = require('request');
     var imdbUrl = 'http://www.omdbapi.com/?apikey=40e9cece&t=' + userInput +'&tomatoes=true&y=&plot=short&r=json';
-
+if(process.argv.length >=4 || typeof userInput === 'string')
     request(imdbUrl, function (error, response, body) {
       if (!error && response.statusCode == 200) {
         var movieObj = JSON.parse(body);
@@ -76,10 +76,27 @@ function movieThis(){
         console.log('\n=============== MOVIE INFO ===============\n');
 
         } else {
-			userInput = 'Mr. Nobody';
-			movieThis();
+            throw error;
         }
 	});
+    else if (process.argv.length <4) {
+        request('http://www.omdbapi.com/?apikey=40e9cece&t=' + 'Mr. Nobody' +'&tomatoes=true&y=&plot=short&r=json',function(error, response, body){
+        if (!error && response.statusCode == 200) {
+        var movieObj = JSON.parse(body);
+        console.log('\n=============== MOVIE INFO ===============\n');
+        console.log(movieObj.Title);
+        console.log(movieObj.Year);
+        console.log(movieObj.imdbRating);
+        console.log(movieObj.Country);
+        console.log(movieObj.Language);
+        console.log(movieObj.Plot);
+        console.log(movieObj.Actors);
+        console.log(movieObj.tomatoRating);
+        console.log(movieObj.tomatoURL);
+        console.log('\n=============== MOVIE INFO ===============\n');
+    }
+        });
+    }
 };//end movie function 
 
 //Do What It Says Function (DWIS)
