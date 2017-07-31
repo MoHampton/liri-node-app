@@ -16,11 +16,9 @@ function myTweets() {
                 // console.log(tweets);
                 for(var i = 0; i < tweets.length; i++) {
                         console.log("\n============= Tweet " + [i] + " ============");
-                        console.log(tweets[i].text);
-                        
-                        
+                        console.log(tweets[i].text);      
                 }//end of twitter for loop
-            }//end of conditional statement
+            }
         });
     }; // end twitter function
 
@@ -38,7 +36,6 @@ function spotifyThis() {
           if (data.tracks.items.length === 0) {
             return console.log('Track not found, please try again');
           }
-          // console.log(data);
           console.log('\n=============== SONG INFO ===============\n');
           console.log('Artist:', data.tracks.items[0].artists[0].name);
           console.log('Track:', data.tracks.items[0].name);
@@ -47,13 +44,11 @@ function spotifyThis() {
           console.log('\n=============== SONG INFO ===============\n');
         }
         });
-
   	} else {
         userInput = 'The Sign Ace of Base';
         spotifyThis();
   	}
 };//end spotify function
-
 
 //movie function 
 function movieThis(){
